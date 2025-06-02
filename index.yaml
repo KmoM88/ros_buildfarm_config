@@ -130,7 +130,7 @@ prerequisites:
   - http://repositories.ros.org/ubuntu/main
   debian_repository_keys:
   - |
-   -----BEGIN PGP PUBLIC KEY BLOCK-----
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
     Version: GnuPGv1
 
     mQINBFzvJpYBEADY8l1YvO7iYW5gUESyzsTGnMvVUmlV3XarBaJz9bGRmgPXh7jc
