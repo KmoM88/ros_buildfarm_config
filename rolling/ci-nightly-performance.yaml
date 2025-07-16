@@ -74,6 +74,7 @@ targets:
       amd64:
 type: ci-build
 underlay_from_ci_jobs:
+- nightly-release
 - nightly-extra-rmw-release
 archive_files:
 - ws/test_results/buildfarm_perf_tests/performance_test_results_*.csv

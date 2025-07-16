@@ -10,9 +10,11 @@ build_tool_args: '--cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_MULTI_RMW_TESTS
 build_tool_test_args: '--retest-until-pass 2 --ctest-args -LE xfail --pytest-args -m "not xfail"'
 jenkins_job_label: ci-agent
 jenkins_job_priority: 50
-jenkins_job_schedule: 15 23 * * *
 jenkins_job_timeout: 300
+jenkins_job_upstream_triggers:
+- nightly-release
 jenkins_job_weight: 4
+package_selection_args: '--packages-above rmw_fastrtps_dynamic_cpp'
 repos_files:
 - https://github.com/ros2/ros2/raw/rolling/ros2.repos
 repositories:
@@ -67,4 +69,6 @@ targets:
     noble:
       amd64:
 type: ci-build
+underlay_from_ci_jobs:
+- nightly-release
 version: 1
