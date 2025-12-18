@@ -10,7 +10,7 @@ jenkins_job_priority: 80
 jenkins_job_timeout: 30
 notifications:
   emails:
-  - clalancette@openrobotics.org
+  - carroll.michael+ros2doc@gmail.com
 type: doc-build
 upload_credential_id: rosdocs
 upload_host: docs.ros.org
