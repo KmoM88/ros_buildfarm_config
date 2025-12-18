@@ -9,6 +9,9 @@ jenkins_job_priority: 90
 jenkins_job_timeout: 390
 # Make the job run alone on a normal buildagent
 jenkins_job_weight: 4
+notifications:
+  emails:
+  - ros-buildfarm@googlegroups.com
 type: doc-build
 upload_credential_id: rosindex-deploy
 upload_repository_url: git@github.com:ros-infrastructure/index.ros.org.git
