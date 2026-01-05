@@ -71,6 +71,8 @@ targets:
   ubuntu:
     noble:
       amd64:
+    resolute:
+      amd64:
 type: ci-build
 underlay_from_ci_jobs:
 - nightly-release
