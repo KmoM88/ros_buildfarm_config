@@ -6,6 +6,11 @@ distributions:
     ci_builds:
       default: local/ci-build.yaml
 jenkins_url: http://localhost:8080
+prerequisites:
+  debian_repositories:
+  - ""
+  debian_repository_keys:
+  - ""
 rosdistro_index_url: https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml
 status_page_repositories: {}
 type: buildfarm
