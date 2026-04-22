@@ -3,6 +3,10 @@
 ---
 ci_builds:
   infra: global/ci-infra.yaml
+doc_builds:
+  independent-packages: global/doc-independent-pkgs-build.yaml
+  ros2doc: global/doc-ros2-documentation.yaml
+  rosindex: global/doc-ros-index.yaml
 jenkins_url: http://jenkins-master:8080
 prerequisites:
   debian_repositories:
