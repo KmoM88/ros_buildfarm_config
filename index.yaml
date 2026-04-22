@@ -3,10 +3,6 @@
 ---
 ci_builds:
   infra: global/ci-infra.yaml
-distributions:
-  humble:
-    ci_builds:
-      benchmark: humble/ci-benchmark.yaml
 jenkins_url: http://jenkins-master:8080
 prerequisites:
   debian_repositories:
