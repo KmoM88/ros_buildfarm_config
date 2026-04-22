@@ -3,6 +3,16 @@
 ---
 ci_builds:
   infra: global/ci-infra.yaml
+distributions:
+  humble:
+    ci_builds:
+      benchmark: humble/ci-benchmark.yaml
+      overlay: humble/ci-overlay.yaml
+    notification_emails: []
+    release_builds:
+      default: humble/release-build.yaml
+    source_builds:
+      default: humble/source-build.yaml
 jenkins_url: http://jenkins-master:8080
 prerequisites:
   debian_repositories:
