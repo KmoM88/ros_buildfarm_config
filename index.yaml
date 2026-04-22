@@ -5,7 +5,7 @@ distributions:
   local:
     ci_builds:
       default: local/ci-build.yaml
-jenkins_url: http://localhost:8080
+jenkins_url: http://jenkins-master:8080
 prerequisites:
   debian_repositories:
   - http://repo.ros2.org/ubuntu/building
