@@ -1,0 +1,16 @@
+%YAML 1.1
+# ROS buildfarm ci-build file for local buildfarm
+---
+build_tool: colcon
+notifications:
+  committers: false
+  maintainers: false
+  emails: []
+repos_files:
+- https://github.com/ros2/ros2/raw/rolling/ros2.repos
+targets:
+  ubuntu:
+    noble:
+      amd64:
+type: ci-build
+version: 1
