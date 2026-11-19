@@ -28,9 +28,7 @@ distributions:
       overlay: humble/ci-overlay.yaml
     doc_builds:
       default: humble/doc-build.yaml
-    notification_emails:
-    - audrow+build.ros2.org@openrobotics.org
-    - ros2-buildfarm-humble@googlegroups.com
+    notification_emails: []
     release_builds:
       default: humble/release-build.yaml
       rhel: humble/release-rhel-build.yaml
@@ -57,9 +55,7 @@ distributions:
       overlay: jazzy/ci-overlay.yaml
     doc_builds:
       default: jazzy/doc-build.yaml
-    notification_emails:
-    - marcogg+build.ros2.org@intrinsic.ai
-    - ros2-buildfarm-jazzy@googlegroups.com
+    notification_emails: []
     release_builds:
       default: jazzy/release-build.yaml
       rhel: jazzy/release-rhel-build.yaml
@@ -87,8 +83,7 @@ distributions:
       overlay: kilted/ci-overlay.yaml
     doc_builds:
       default: kilted/doc-build.yaml
-    notification_emails:
-    - ros2-buildfarm-kilted@googlegroups.com
+    notification_emails: []
     release_builds:
       default: kilted/release-build.yaml
       rhel: kilted/release-rhel-build.yaml
@@ -116,8 +111,7 @@ distributions:
       overlay: lyrical/ci-overlay.yaml
     doc_builds:
       default: lyrical/doc-build.yaml
-    notification_emails:
-    - ros2-buildfarm-rolling@googlegroups.com
+    notification_emails: []
     release_builds:
       default: lyrical/release-build.yaml
       fedora: lyrical/release-fedora-build.yaml
@@ -142,9 +136,7 @@ distributions:
       overlay: rolling/ci-overlay.yaml
     doc_builds:
       default: rolling/doc-build.yaml
-    notification_emails:
-    - steven+build.ros2.org@openrobotics.org
-    - ros2-buildfarm-rolling@googlegroups.com
+    notification_emails: []
     release_builds:
       default: rolling/release-build.yaml
       fedora: rolling/release-fedora-build.yaml
@@ -152,13 +144,14 @@ distributions:
       unv8: rolling/release-ubuntu-arm64-build.yaml
     source_builds:
       default: rolling/source-build.yaml
-jenkins_url: https://build.ros2.org
-notification_emails:
-- steven+build.ros2.org@openrobotics.org
+jenkins_url: http://jenkins:8080
+notification_emails: []
 prerequisites:
   debian_repositories:
+  - http://repo/ubuntu/building
   - http://repo.ros2.org/ubuntu/building
   debian_repository_keys:
+  - __LOCAL_REPO_GPG_PUBLIC_KEY__
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
     Version: GnuPGv1
@@ -205,9 +198,9 @@ prerequisites:
 rosdistro_index_url: https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml
 status_page_repositories:
   default:
-  - http://repo.ros2.org/ubuntu/building
-  - http://repo.ros2.org/ubuntu/testing
-  - http://repo.ros2.org/ubuntu/main
+  - http://repo/ubuntu/building
+  - http://repo/ubuntu/testing
+  - http://repo/ubuntu/main
   rhel:
   - http://repo.ros2.org/rhel/building
   - http://repo.ros2.org/rhel/testing

@@ -10,19 +10,37 @@ jenkins_binary_job_priority: 81
 jenkins_binary_job_timeout: 150
 jenkins_source_job_priority: 71
 jenkins_source_job_timeout: 30
+docker_mode: baseline
 notifications:
-  emails:
-  - steven+build.ros2.org@openrobotics.org
-  - ros2-buildfarm-lyrical@googlegroups.com
-  maintainers: true
+  emails: []
+  maintainers: false
+orchestration_mode: reverse-trigger
 package_dependency_behavior:
   include_test_dependencies: false
   run_package_tests: false
+pipeline_jobs: false
+ros_buildfarm_repository_url: git://repo/ros_buildfarm.git
+ros_buildfarm_repository_version: rossif/lyrical-pipelines-iter1
+slice_packages:
+- ament_package
+- ament_cmake_core
+- ament_cmake
+- rcutils
+- rcpputils
+- rosidl_typesupport_interface
+- rmw
+- rmw_implementation_cmake
+- rcl_logging_interface
+- rcl_logging_spdlog
+- rcl_yaml_param_parser
+- rcl
+- rclcpp
 sync:
-  package_count: 499
-  packages: [desktop]
+  package_count: 13
+  packages: [rclcpp]
 repositories:
   keys:
+  - __LOCAL_REPO_GPG_PUBLIC_KEY__
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
     Version: GnuPG v1
@@ -67,8 +85,9 @@ repositories:
     =9IZg
     -----END PGP PUBLIC KEY BLOCK-----
   urls:
+  - http://repo/ubuntu/building
   - http://repo.ros2.org/ubuntu/building
-target_repository: http://repo.ros2.org/ubuntu/building
+target_repository: http://repo/ubuntu/building
 targets:
   ubuntu:
     resolute:
